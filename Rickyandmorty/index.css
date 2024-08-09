@@ -1,0 +1,257 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo da página */
+body {
+    background: url('./fotos/wp7227934.webp') no-repeat center center;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header-content img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Área Principal */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Imagens Laterais */
+.side-image {
+    position: absolute;
+    width: 25%; /* Aumentar a largura para melhor visualização */
+    height: auto;
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.side-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Imagem à esquerda */
+.side-image.left {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Imagem à direita */
+.side-image.right {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Efeito hover das imagens laterais */
+.side-image:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+/* Animações */
+@keyframes sideImageMove {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Imagem do cabeçalho */
+.header-content img {
+    animation: fadeIn 2s ease-out;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background: rgba(8, 0, 0, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 2;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Estilo do título */
+.container h2 {
+    color: #F5A623; /* Laranja */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: 700;
+    animation: bounce 2s infinite;
+}
+
+/* Estilo dos labels */
+.container label {
+    font-size: 1.1em;
+    color: #F5A623; /* Laranja */
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilo do input */
+.container input {
+    width: calc(100% - 24px);
+    padding: 15px;
+    font-size: 1em;
+    border: 2px solid #7B4B92; /* Roxo Médio */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 4px rgba(54, 6, 131, 0.1);
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo de foco do input */
+.container input:focus {
+    border-color: #5A2D81; /* Roxo Escuro */
+    box-shadow: 0 0 8px rgba(30, 216, 216, 0.3);
+}
+
+/* Estilo do botão */
+.container button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    color: #fff;
+    background: #5A2D81; /* Roxo Escuro */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Efeito hover do botão */
+.container button:hover {
+    background: #7B4B92; /* Roxo Médio */
+    transform: translateY(-2px);
+}
+
+/* Estilo dos detalhes do personagem */
+.ricky-details {
+    margin-top: 10px;
+    padding: 10px;
+    background: #7B4B92; /* Roxo Médio */
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Estilo do card do personagem */
+.character-card {
+    margin-bottom: 2px;
+    padding: 10px;
+    background: #fdfdfd;
+    border-radius: 5px;
+    border: 1px solid #f8d6d6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+/* Efeito hover do card do personagem */
+.character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo da imagem do personagem */
+.character-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Estilo do texto dentro do card */
+.character-card p {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Adicionar um fundo estilizado ao card */
+.character-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 85, 255, 0.1) 20%, transparent 60%);
+    z-index: -1;
+}
+
+/* Rodapé */
+footer {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    font-size: 0.8em;
+    width: 100%;
+}

@@ -1,0 +1,8 @@
+algoritmo imprimir_1_a_10
+var
+    i: inteiro
+inicio
+    para i de 1 ate 10 faca
+        escreva(i, " ")
+    fimpara
+fimalgoritmo

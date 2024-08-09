@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty Character Info</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./fotos/imagem_Banner-removebg-preview.png" alt="Header Image">
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <div class="side-image left">
+            <img src="./fotos/baixados__2_-removebg-preview.png" alt="Rick Sanchez">
+        </div>
+        <div class="side-image right">
+            <img src="./fotos/foto mostro.png" alt="Morty Smith">
+        </div>
+        
+        <div class="container">
+            <div class="image-header">
+                <img src="./fotos/baixados__1_-removebg-preview.png" alt="Man Walking" class="walking-image">
+            </div>
+            <h2>Personagem Rick e Morty</h2>
+            <label for="rickyInput">Digite o nome ou ID do personagem</label>
+            <input type="text" id="rickyInput" placeholder="Digite o nome ou ID do personagem">
+            <button id="fetchRickyButton">Buscar</button>
+            <div id="rickyDetails" class="ricky-details"></div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2024 Rick and Morty Character Info. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
