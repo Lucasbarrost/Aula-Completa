@@ -1,0 +1,170 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #009700 0%, #000000 100%);
+    color: #dfbe03;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: visible;
+}
+
+/* Container principal */
+.container {
+    max-width: 700px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(3, 79, 241, 0.3);
+    text-align: center;
+    position: fixed;
+    z-index: 2;
+}
+
+/* Estilo do cabeçalho */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    width: 100%; /* Adjust width as necessary */
+    max-width: 500px; /* Max width for large screens */
+    height: auto;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-top: 10px;
+    color: #fcf7f7; /* Adjust text color */
+}
+
+/* Formulário de busca */
+label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: block;
+    color: #fcf7f7;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #f3db05;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    background-color: rgba(2, 80, 248, 0.2);
+    color: #ffe600;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #ffcb05;
+    box-shadow: 0 0 8px #eeea068e;
+}
+
+/* Botão de busca */
+button {
+    width: 80%;
+    padding: 12px;
+    font-size: 1.1em;
+    color: #0e0d0d;
+    background: linear-gradient(45deg, #edff4d, #b69b02);
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(146, 0, 0, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.4s;
+}
+
+button:hover::after {
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0059ff, #03bfd8);
+    transform: translateY(-3px);
+}
+
+/* Detalhes do Pokémon */
+.pokemon-details {
+    margin-top: 20px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid #fffb0b;
+    border-radius: 20px;
+    box-shadow: 0 9px 8px rgba(2, 47, 250, 0.2);
+    text-align: center;
+    color: #fcf7f7; /* Adjust text color */
+}
+
+/* Imagem de fundo */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+/* Rayquaza flutuante */
+.floating-rayquaza {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    z-index: 1;
+    animation: rayquazaFloat 20s ease-in-out infinite alternate;
+}
+
+.floating-rayquaza img {
+    width: 100%; /* Adjust width as necessary */
+    max-width: 1500px; /* Max width for large screens */
+    height: auto;
+}
+
+@keyframes rayquazaFloat {
+    0% {
+        transform: translateY(0) rotateZ(0);
+    }
+    50% {
+        transform: translateY(-20px) rotateZ(2deg);
+    }
+    100% {
+        transform: translateY(0) rotateZ(0);
+    }
+}
